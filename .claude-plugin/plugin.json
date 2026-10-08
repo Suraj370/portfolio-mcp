@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Edit Suraj's portfolio (projects, experience, skills, contact) from any Claude Code session. Changes are previewed, then committed to GitHub.",
   "author": {
     "name": "Suraj Panda"
@@ -16,6 +16,9 @@
     },
     "add-role": {
       "source": "./commands/add-role.md"
+    },
+    "show": {
+      "source": "./commands/show.md"
     }
   },
   "mcpServers": {
