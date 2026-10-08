@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-mcp",
+  "owner": { "name": "Suraj Panda" },
+  "metadata": { "description": "Personal portfolio tooling for Claude Code" },
+  "plugins": [
+    {
+      "name": "portfolio",
+      "source": "./",
+      "description": "Edit my portfolio content from any Claude Code session"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "description": "Edit Suraj's portfolio (projects, experience, skills, contact) from any Claude Code session. Changes are previewed, then committed to GitHub.",
+  "author": { "name": "Suraj Panda" },
+  "repository": "https://github.com/Suraj370/portfolio-mcp",
+  "license": "MIT",
+  "skills": ["./skills/"],
+  "commands": {
+    "add-project": { "source": "./commands/add-project.md" },
+    "add-role": { "source": "./commands/add-role.md" }
+  },
+  "userConfig": {
+    "github_token": {
+      "type": "string",
+      "title": "GitHub token",
+      "description": "Fine-grained token for the portfolio repo with Contents: read and write",
+      "sensitive": true
+    }
+  },
+  "mcpServers": {
+    "portfolio": {
+      "command": "npx",
+      "args": ["-y", "github:Suraj370/portfolio-mcp"],
+      "env": {
+        "GITHUB_TOKEN": "${user_config.github_token}",
+        "PORTFOLIO_REPO": "Suraj370/surajpanda"
+      }
+    }
+  }
+}
